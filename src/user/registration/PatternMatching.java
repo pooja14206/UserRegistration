@@ -56,7 +56,26 @@ public class PatternMatching {
 		if (Pattern.matches(emailIdPattern, checkPattern))
 			System.out.println("Pattern match.");
 		else
-			System.out.println("patern match fail!Email has 3 mandatory parts abc, bl, & co and 2 optional (xyz & in) with	precise @ and . positions");
+			System.out.println(
+					"patern match fail!Email has 3 mandatory parts abc, bl, & co and 2 optional (xyz & in) with	precise @ and . positions");
+	}
+
+	/**
+	 * This method is used validating userinput phoneNO.
+	 * 
+	 * @param phoneNumberPattern hold the correct pattern to match with the userinput.
+	 */
+
+	public void checkPatternPhoneNumber() {
+		String phoneNumberPattern = "[0-9]{2}[\\s][0-9]{10}$";
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("enter the PhoneNo: ");
+		String checkPattern = userInput.nextLine();
+
+		if (Pattern.matches(phoneNumberPattern, checkPattern))
+			System.out.println("Pattern match.");
+		else
+			System.out.println("patern match fail!\nCountry code follow by space and 10 digit number");
 	}
 
 }
