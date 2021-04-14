@@ -9,10 +9,12 @@ public class Main {
 		PatternMatching firstName = new PatternMatching();
 		PatternMatching lastName = new PatternMatching();
 		PatternMatching emailId = new PatternMatching();
+		PatternMatching phoneNumber = new PatternMatching();
 
 		firstName.checkPatternFirstName();
 		lastName.checkPatternLastName();
 		emailId.checkPatternEmailId();
+		phoneNumber.checkPatternPhoneNumber();
 
 	}
 
