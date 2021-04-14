@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class PatternMatching {
 	/**
-	 * This method is used validating predefined firstname.
+	 * This method is used validating userinput firstname.
 	 * 
 	 * @param firstNamePattern hold the correct pattern to match with the user
 	 *                         input.
@@ -24,10 +24,9 @@ public class PatternMatching {
 	}
 
 	/**
-	 * This method is used validating predefined lastname.
+	 * This method is used validating userinput lastname.
 	 * 
-	 * @param lasttNamePattern hold the correct pattern to match with the user
-	 *                         input.
+	 * @param lasttNamePattern hold the correct pattern to match with the userinput.
 	 */
 
 	public void checkPatternLastName() {
@@ -40,6 +39,24 @@ public class PatternMatching {
 			System.out.println("Pattern match.");
 		else
 			System.out.println("patern match fail! \nLast name starts with Cap and has minimum 3 characters");
+	}
+
+	/**
+	 * This method is used validating userinput email.
+	 * 
+	 * @param emailIdPattern hold the correct pattern to match with the userinput.
+	 */
+
+	public void checkPatternEmailId() {
+		String emailIdPattern = "^[a-zA-Z0-9]{1,}[.a-zA-Z0-9]*@[a-zA-Z0-9]{1,}((.){1}+)([a-z]{1,3}+)(.[a-z]{2})*$";
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("enter the Email address: ");
+		String checkPattern = userInput.next();
+
+		if (Pattern.matches(emailIdPattern, checkPattern))
+			System.out.println("Pattern match.");
+		else
+			System.out.println("patern match fail!Email has 3 mandatory parts abc, bl, & co and 2 optional (xyz & in) with	precise @ and . positions");
 	}
 
 }
