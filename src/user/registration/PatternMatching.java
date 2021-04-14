@@ -7,8 +7,7 @@ public class PatternMatching {
 	/**
 	 * This method is used validating userinput firstname.
 	 * 
-	 * @param firstNamePattern hold the correct pattern to match with the user
-	 *                         input.
+	 * @param firstNamePattern hold the correct pattern to match with the userinput.
 	 */
 
 	public void checkPatternFirstName() {
@@ -56,12 +55,11 @@ public class PatternMatching {
 		if (Pattern.matches(emailIdPattern, checkPattern))
 			System.out.println("Pattern match.");
 		else
-			System.out.println(
-					"patern match fail!Email has 3 mandatory parts abc, bl, & co and 2 optional (xyz & in) with	precise @ and . positions");
+			System.out.println("patern match fail!Email has 3 mandatory parts abc,bl & co and 2 optional (xyz & in) with precise @ and.positions");
 	}
 
 	/**
-	 * This method is used validating userinput phoneNO.
+	 * This method is used validating userinput phoneNo.
 	 * 
 	 * @param phoneNumberPattern hold the correct pattern to match with the userinput.
 	 */
@@ -76,6 +74,24 @@ public class PatternMatching {
 			System.out.println("Pattern match.");
 		else
 			System.out.println("patern match fail!\nCountry code follow by space and 10 digit number");
+	}
+
+	/**
+	 * This method is used validating userinput password.
+	 * 
+	 * @param passwordPattern hold the correct pattern to match with the userinput.
+	 */
+
+	public void checkPatternPassword() {
+		String passwordPattern = "^[a-zA-Z\\d]{8,}";
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("enter the Password: ");
+		String checkPattern = userInput.next();
+
+		if (Pattern.matches(passwordPattern, checkPattern))
+			System.out.println("Pattern match.");
+		else
+			System.out.println("patern match fail! \nminimun 8 character.");
 	}
 
 }
