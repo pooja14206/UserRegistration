@@ -7,8 +7,10 @@ public class Main {
 		System.out.println("Welcome to user registration file.");
 
 		PatternMatching firstName = new PatternMatching();
+		PatternMatching lastName = new PatternMatching();
 
 		firstName.checkPatternFirstName();
+		lastName.checkPatternLastName();
 
 	}
 

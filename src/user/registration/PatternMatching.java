@@ -5,9 +5,10 @@ import java.util.regex.Pattern;
 
 public class PatternMatching {
 	/**
-	 * This method is used validating predefined mobile number.
+	 * This method is used validating predefined firstname.
 	 * 
-	 * @param firstNamePattern hold the correct pattern to match wit the user input.
+	 * @param firstNamePattern hold the correct pattern to match with the user
+	 *                         input.
 	 */
 
 	public void checkPatternFirstName() {
@@ -20,6 +21,25 @@ public class PatternMatching {
 			System.out.println("Pattern match. Correct Input.");
 		else
 			System.out.println("patern match fail!\nFirst name starts with Cap and has minimum 3 characters");
+	}
+
+	/**
+	 * This method is used validating predefined lastname.
+	 * 
+	 * @param lasttNamePattern hold the correct pattern to match with the user
+	 *                         input.
+	 */
+
+	public void checkPatternLastName() {
+		String lastNamePattern = "^[A-Z]{1}[a-z]{2,}$";
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("enter the Last Name: ");
+		String checkPattern = userInput.next();
+
+		if (Pattern.matches(lastNamePattern, checkPattern))
+			System.out.println("Pattern match.");
+		else
+			System.out.println("patern match fail! \nLast name starts with Cap and has minimum 3 characters");
 	}
 
 }
