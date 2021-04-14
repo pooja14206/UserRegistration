@@ -78,12 +78,15 @@ public class PatternMatching {
 
 	/**
 	 * This method is used validating userinput password.
-	 * 
+	 * Rule-1 Minimum 8 character
+	 * Rule-2 At least one Upper case
+	 * Rule-3  At least one Numeric value 
+	 * Rule-4 at least one Special character
 	 * @param passwordPattern hold the correct pattern to match with the userinput.
 	 */
 
 	public void checkPatternPassword() {
-		String passwordPattern = "^[a-zA-Z\\d]{8,}";
+		String passwordPattern = "^(?=.*\\d)([a-z])*(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$";
 		Scanner userInput = new Scanner(System.in);
 		System.out.println("enter the Password: ");
 		String checkPattern = userInput.next();
@@ -91,7 +94,7 @@ public class PatternMatching {
 		if (Pattern.matches(passwordPattern, checkPattern))
 			System.out.println("Pattern match.");
 		else
-			System.out.println("patern match fail! \nminimun 8 character.");
+			System.out.println("patern match fail! \nplease follow the pattern for right password");
 	}
 
 }

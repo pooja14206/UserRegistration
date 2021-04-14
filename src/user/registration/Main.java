@@ -1,7 +1,5 @@
 package user.registration;
 
-import java.util.regex.*;
-
 public class Main {
 	public static void main(String[] args) {
 		System.out.println("Welcome to user registration file.");
@@ -12,13 +10,11 @@ public class Main {
 		PatternMatching phoneNumber = new PatternMatching();
 		PatternMatching password = new PatternMatching();
 
-
 		firstName.checkPatternFirstName();
 		lastName.checkPatternLastName();
 		emailId.checkPatternEmailId();
 		phoneNumber.checkPatternPhoneNumber();
 		password.checkPatternPassword();
-
 
 	}
 
